@@ -25,7 +25,6 @@ const Counter = () => {
             className=" bg-cyan-900 p-2 rounded-2xl text-amber-50 "
             onClick={() => setCount(0)}
           >
-            {" "}
             Reset
           </button>
         </div>
