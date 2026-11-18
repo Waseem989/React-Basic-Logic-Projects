@@ -8,8 +8,8 @@ import Counter from "./component/Counter";
 function App() {
   return (
     <>
-      <div className="">
-        <h1>helllo world</h1>
+      <div className=" flex flex-col">
+        <h1 className="text-2xl font-bold underline">All Component are rendered on Appp page</h1>
         <Counter/>
       </div>
     </>
