@@ -11,7 +11,7 @@ function App() {
     <>
       <div className=" flex flex-col">
         <h1 className="text-2xl font-bold underline">
-          All Component are rendered on Appp page
+          All Component are rendering on Parent
         </h1>
         <div>
           {/* <Counter /> */}
