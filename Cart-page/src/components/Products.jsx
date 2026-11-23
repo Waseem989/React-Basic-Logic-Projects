@@ -2,6 +2,8 @@ import { useState, useEffect, } from "react";
 import { useDispatch } from "react-redux";
 import { additem } from "../Slice/Slice";
 
+
+
 const Products = ({ searchTerm }) => {
     const dispatch = useDispatch();
   const [items, setItems] = useState([]);
@@ -73,6 +75,9 @@ const Products = ({ searchTerm }) => {
             <p className="text-gray-800 font-bold text-lg">${item.Price}</p>
             <div>
               <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" onClick={()=>dispatch(additem(1))} >
+                Add to Cart
+              </button>
+              <button className="bg-red-400 text-white px-4 py-2 rounded hover:bg-red-500"  >
                 Add to Cart
               </button>
             </div>
