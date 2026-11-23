@@ -78,7 +78,7 @@ const Products = ({ searchTerm }) => {
                 Add to Cart
               </button>
               <button className="bg-red-400 text-white px-4 py-2 rounded hover:bg-red-500"  >
-                Add to Cart
+                Remove Item
               </button>
             </div>
           </div>
