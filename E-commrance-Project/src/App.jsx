@@ -3,11 +3,13 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import LoginDialog from "./components/LoginDialog";
-
+import Footer from "./components/Footer";
 import ProtectedRoute from "./Auth/ProtectedRoute";
-
+import Cart from "./components/Cart";
 import AdminDashboard from "./pages/AdminDashboard";
 import Userdashboard from "./pages/Userdashboard";
+import Checkout from "./components/Checkout";
+import OrderSuccess from "./components/OrderSuccess";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -24,15 +26,21 @@ function App() {
       {/* Routes */}
       <Routes>
         {/* Public Route */}
-        <Route path="/" element={<Userdashboard />} />
-
-        <Route path="/UserDashBoard" element={<Userdashboard />} />
+        <Route path="/" element={<Userdashboard search={search} />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/order-success" element={<OrderSuccess />} />
+        <Route
+          path="/UserDashBoard"
+          element={<Userdashboard search={search} />}
+        />
 
         {/* Protected Admin Route */}
         <Route element={<ProtectedRoute />}>
-          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/admin" element={<AdminDashboard search={search} />} />
         </Route>
       </Routes>
+      <Footer />
     </>
   );
 }

@@ -5,7 +5,7 @@ const API = "https://6aea1a473d3dd3d37be624cd.mockapi.io/Products";
 
 const emptyForm = { Title: "", Des: "", Image: "", Price: "", Rating: "" };
 
-const Admin = () => {
+const AdminDashboard = () => {
   const [form, setForm] = useState(emptyForm);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState(null);
@@ -41,6 +41,9 @@ const Admin = () => {
       setSubmitting(false);
     }
   };
+   const filteredItems = items.filter((item) =>
+    item.Title.toLowerCase().includes(search.toLowerCase()),
+  );
 
   const inputClass =
     "w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500";
@@ -136,4 +139,4 @@ const Admin = () => {
   );
 };
 
-export default Admin;
+export default AdminDashboard;
