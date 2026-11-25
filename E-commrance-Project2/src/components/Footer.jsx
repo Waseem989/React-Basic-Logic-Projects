@@ -120,7 +120,7 @@ const Footer = () => {
 
             <li className="flex gap-3 items-center">
               <FiMail className="text-emerald-400" />
-              <span>support@shopzone.com</span>
+              <span>kashmiri6980@gmail.com</span>
             </li>
           </ul>
         </div>
@@ -130,7 +130,7 @@ const Footer = () => {
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-gray-500 text-center">
-            © {date} ShopZone. All Rights Reserved.
+            © {date} ShopZone. All Rights Reserved by Waseem Ashraf
           </p>
         </div>
       </div>

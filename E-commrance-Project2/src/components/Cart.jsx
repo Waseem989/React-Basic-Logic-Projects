@@ -35,7 +35,7 @@ const Cart = () => {
         <h1 className="text-2xl font-extrabold">Shopping Cart</h1>
         <button
           onClick={() => dispatch(clearCart())}
-          className="text-red-600 hover:underline"
+          className="text-white font-bold hover:bg-red-600 bg-red-500 p-1 rounded-xl"
         >
           Clear Cart
         </button>
@@ -80,7 +80,7 @@ const Cart = () => {
 
             <button
               onClick={() => dispatch(removeFromCart(item.id))}
-              className="text-red-500 hover:text-red-700"
+              className="text-red-500 hover:text-red-700 bg-gray-900 p-2 rounded-xl"
             >
               ✕
             </button>
@@ -96,7 +96,7 @@ const Cart = () => {
       <div className="flex flex-col sm:flex-row gap-3 mt-6">
         <button
           onClick={() => navigate("/")}
-          className="flex-1 border border-gray-300 py-3 rounded-lg hover:bg-gray-50"
+          className="flex-1 border border-gray-300 py-3 rounded-lg hover:bg-gray-100"
         >
           Continue Shopping
         </button>
