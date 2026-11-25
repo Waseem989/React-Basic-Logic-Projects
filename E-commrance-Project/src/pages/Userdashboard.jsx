@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../Redux/CartSlice";
 import PopupForm from "../components/PopupForm";
-
 const UserDashboard = ({ search }) => {
   const dispatch = useDispatch();
   const [items, setItems] = useState([]);
