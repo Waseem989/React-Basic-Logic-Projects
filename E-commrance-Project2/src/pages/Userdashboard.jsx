@@ -205,7 +205,7 @@ const UserDashboard = ({ search = "" }) => {
                     </h3>
 
                     <p className="text-blue-600 font-bold mt-2">
-                      ${product.price}
+                      {product.price}
                     </p>
 
                   </div>
