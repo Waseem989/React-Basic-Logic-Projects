@@ -17,7 +17,7 @@ const UserDashboard = ({ search = "" }) => {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   // Show 20 products initially
-  const [visibleCount, setVisibleCount] = useState(20);
+  const [visibleCount, setVisibleCount] = useState(6);
 
   // Fetch main products
   useEffect(() => {
@@ -69,7 +69,7 @@ const UserDashboard = ({ search = "" }) => {
 
   // Reset visible products when search or category changes
   useEffect(() => {
-    setVisibleCount(20);
+    setVisibleCount(6);
   }, [selectedCategory, search]);
 
   // Get category from API
@@ -97,7 +97,7 @@ const UserDashboard = ({ search = "" }) => {
 
   // Show next 20 products
   const handleShowMore = () => {
-    setVisibleCount((prev) => prev + 20);
+    setVisibleCount((prev) => prev + 6);
   };
 
   // Products currently visible
