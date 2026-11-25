@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../redux/CartSlice";
+import { addToCart } from "../Redux/CartSlice";
 import PopupForm from "../components/PopupForm";
+
 const UserDashboard = ({ search }) => {
   const dispatch = useDispatch();
   const [items, setItems] = useState([]);
@@ -31,9 +32,8 @@ const UserDashboard = ({ search }) => {
   );
 
   return (
-
     <div className="container mx-auto px-4 py-6">
-       <PopupForm />
+      <PopupForm />
       {loading && (
         <h1 className="text-center font-extrabold text-xl py-6">
           Loading data...

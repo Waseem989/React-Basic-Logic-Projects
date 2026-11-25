@@ -1,11 +1,9 @@
-
 import React, { useState } from "react";
 import { FaUserShield } from "react-icons/fa";
 import { useAuth } from "../Auth/AuthContext";
 import { useNavigate } from "react-router-dom";
 
 const LoginDialog = ({ isDialog, setIsDialog }) => {
-
   const { login } = useAuth();
   const navigate = useNavigate();
 
@@ -38,9 +36,7 @@ const LoginDialog = ({ isDialog, setIsDialog }) => {
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
-
       <div className="relative w-full max-w-md rounded-2xl bg-white p-8 shadow-2xl">
-
         <button
           type="button"
           onClick={() => setIsDialog(false)}
@@ -50,23 +46,18 @@ const LoginDialog = ({ isDialog, setIsDialog }) => {
         </button>
 
         <div className="mb-8 text-center">
-
           <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-600">
             <FaUserShield size={30} />
           </div>
 
-          <h2 className="text-2xl font-bold text-gray-900">
-            Admin Portal
-          </h2>
+          <h2 className="text-2xl font-bold text-gray-900">Admin Portal</h2>
 
           <p className="mt-2 text-sm text-gray-500">
             Login to access your dashboard
           </p>
-
         </div>
 
         <form onSubmit={handleLogin} className="space-y-5">
-
           <div>
             <label className="mb-2 block text-sm font-semibold text-gray-700">
               Email
@@ -97,11 +88,7 @@ const LoginDialog = ({ isDialog, setIsDialog }) => {
             />
           </div>
 
-          {error && (
-            <p className="text-sm text-red-500">
-              {error}
-            </p>
-          )}
+          {error && <p className="text-sm text-red-500">{error}</p>}
 
           <button
             type="submit"
@@ -110,9 +97,7 @@ const LoginDialog = ({ isDialog, setIsDialog }) => {
           >
             {loading ? "Checking..." : "Login to Dashboard"}
           </button>
-
         </form>
-
       </div>
     </div>
   );

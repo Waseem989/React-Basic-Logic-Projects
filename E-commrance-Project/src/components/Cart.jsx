@@ -7,7 +7,7 @@ import {
   increaseQty,
   decreaseQty,
   selectCartTotal,
-} from "../redux/CartSlice";
+} from "../Redux/CartSlice";
 
 const Cart = () => {
   const dispatch = useDispatch();

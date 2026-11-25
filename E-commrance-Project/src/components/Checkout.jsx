@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { clearCart, selectCartTotal } from "../redux/CartSlice";
+import { clearCart, selectCartTotal } from "../Redux/CartSlice";
 
 const FREE_SHIPPING_ABOVE = 100;
 const SHIPPING_FEE = 5;
@@ -12,7 +12,15 @@ const inputClass = (hasError) =>
   }`;
 
 // Defined OUTSIDE Checkout so inputs don't lose focus while typing
-const Field = ({ label, name, type = "text", placeholder, value, error, onChange }) => (
+const Field = ({
+  label,
+  name,
+  type = "text",
+  placeholder,
+  value,
+  error,
+  onChange,
+}) => (
   <div>
     <label className="block text-sm font-medium mb-1">{label}</label>
     <input

@@ -93,14 +93,18 @@ const AdminDashboard = () => {
       });
 
       if (!response.ok) {
-        throw new Error(isEdit ? "Update fail ho gaya" : "Product add nahi hua");
+        throw new Error(
+          isEdit ? "Update fail ho gaya" : "Product add nahi hua",
+        );
       }
 
       // Add mode mein form khali, edit mode mein same values rehne do
       if (!isEdit) setForm(emptyForm);
 
       setSuccess(
-        isEdit ? "Product updated successfully!" : "Product added successfully!"
+        isEdit
+          ? "Product updated successfully!"
+          : "Product added successfully!",
       );
       setTimeout(() => setSuccess(""), 3000);
 
@@ -114,7 +118,9 @@ const AdminDashboard = () => {
 
   // ---------- Delete ----------
   const handleDelete = async (id) => {
-    if (!window.confirm("Kya aap sach mein ye product delete karna chahte hain?"))
+    if (
+      !window.confirm("Kya aap sach mein ye product delete karna chahte hain?")
+    )
       return;
 
     try {
@@ -125,7 +131,6 @@ const AdminDashboard = () => {
       alert(err.message);
     }
   };
-  
 
   const inputClass =
     "w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500";
@@ -244,8 +249,8 @@ const AdminDashboard = () => {
                 {submitting
                   ? "Please wait..."
                   : editingId
-                  ? "Update Product"
-                  : "Add Product"}
+                    ? "Update Product"
+                    : "Add Product"}
               </button>
             </form>
           </div>

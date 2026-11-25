@@ -10,7 +10,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useAuth } from "../Auth/AuthContext";
-import { selectCartCount } from "../redux/CartSlice";
+import { selectCartCount } from "../Redux/CartSlice";
 
 const Navbar = ({ search, setSearch, setIsDialog }) => {
   const [isOpen, setIsOpen] = useState(false);
