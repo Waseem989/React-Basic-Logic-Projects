@@ -16,8 +16,11 @@ const UserDashboard = ({ search = "" }) => {
 
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  // Show 20 products initially
+  // Show 6 products initially
   const [visibleCount, setVisibleCount] = useState(6);
+
+  // Success popup state
+  const [successMessage, setSuccessMessage] = useState("");
 
   // Fetch main products
   useEffect(() => {
@@ -95,9 +98,22 @@ const UserDashboard = ({ search = "" }) => {
     return matchesSearch && matchesCategory;
   });
 
-  // Show next 20 products
+  // Show next 6 products
   const handleShowMore = () => {
     setVisibleCount((prev) => prev + 6);
+  };
+
+  // Add product to cart and show success popup
+  const handleAddToCart = (item) => {
+    dispatch(addToCart(item));
+
+    setSuccessMessage(
+      `${item.Title} added to cart successfully!`
+    );
+
+    setTimeout(() => {
+      setSuccessMessage("");
+    }, 2500);
   };
 
   // Products currently visible
@@ -107,6 +123,36 @@ const UserDashboard = ({ search = "" }) => {
     <div className="min-h-screen bg-gray-50">
 
       <PopupForm />
+
+      {/* SUCCESS POPUP */}
+      {successMessage && (
+        <div className="fixed top-5 right-5 z-[9999] animate-in slide-in-from-right duration-300">
+          <div className="flex items-center gap-3 bg-white border border-green-200 shadow-xl rounded-xl p-4 max-w-sm">
+
+            <div className="bg-green-100 text-green-600 w-10 h-10 shrink-0 rounded-full flex items-center justify-center text-xl font-bold">
+              ✓
+            </div>
+
+            <div className="flex-1">
+              <h3 className="font-bold text-gray-900">
+                Added Successfully!
+              </h3>
+
+              <p className="text-sm text-gray-500">
+                {successMessage}
+              </p>
+            </div>
+
+            <button
+              onClick={() => setSuccessMessage("")}
+              className="text-gray-400 hover:text-gray-700 ml-2"
+            >
+              ✕
+            </button>
+
+          </div>
+        </div>
+      )}
 
       <div className="container mx-auto px-4 py-2">
 
@@ -282,7 +328,7 @@ const UserDashboard = ({ search = "" }) => {
                     </p>
 
                     <button
-                      onClick={() => dispatch(addToCart(item))}
+                      onClick={() => handleAddToCart(item)}
                       className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition"
                     >
                       Add to Cart
