@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import ProtectedRoute from "./Auth/ProtectedRoute";
 import Cart from "./components/Cart";
 import AdminDashboard from "./pages/AdminDashboard";
-import Userdashboard from "./pages/Userdashboard";
+import Userdashboard from "./pages/UserDashboard";
 import Checkout from "./components/Checkout";
 import OrderSuccess from "./components/OrderSuccess";
 
