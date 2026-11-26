@@ -1,0 +1,8 @@
+body { margin: 0; font-family: system-ui, sans-serif; background: #0f172a; color: #e2e8f0; }
+main { max-width: 640px; margin: 0 auto; padding: 24px 16px; }
+button, select { font: inherit; padding: 10px 14px; border-radius: 8px; border: 1px solid #475569; background: #1e293b; color: inherit; }
+button { display: block; width: 100%; margin-top: 10px; text-align: left; cursor: pointer; }
+button.correct { background: #166534; }
+button.wrong { background: #991b1b; }
+button.next { background: #1d4ed8; }
+section { border-top: 1px solid #334155; }

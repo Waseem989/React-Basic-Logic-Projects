@@ -1,0 +1,285 @@
+
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Waseem Ashraf",
+      "email": "waseem@example.com",
+      "password": "User123!",
+      "role": "admin",
+      "profile": "https://i.pravatar.cc/150?img=12",
+      "status": "active",
+      "createdAt": "2026-11-01"
+    },
+    {
+      "id": "2",
+      "name": "Ali Hassan",
+      "email": "ali@example.com",
+      "password": "User123!",
+      "role": "user",
+      "profile": "https://i.pravatar.cc/150?img=11",
+      "status": "active",
+      "createdAt": "2026-11-02"
+    },
+    {
+      "id": "3",
+      "name": "Sarah Ahmed",
+      "email": "sarah@example.com",
+      "password": "User123!",
+      "role": "user",
+      "profile": "https://i.pravatar.cc/150?img=47",
+      "status": "active",
+      "createdAt": "2026-11-03"
+    },
+    {
+      "id": "4",
+      "name": "Usman Khan",
+      "email": "usman@example.com",
+      "password": "User123!",
+      "role": "user",
+      "profile": "https://i.pravatar.cc/150?img=13",
+      "status": "active",
+      "createdAt": "2026-11-04"
+    },
+    {
+      "id": "5",
+      "name": "Fatima Noor",
+      "email": "fatima@example.com",
+      "password": "User123!",
+      "role": "user",
+      "profile": "https://i.pravatar.cc/150?img=44",
+      "status": "blocked",
+      "createdAt": "2026-11-05"
+    },
+    {
+      "id": "6",
+      "name": "Ahmed Raza",
+      "email": "ahmed@example.com",
+      "password": "User123!",
+      "role": "user",
+      "profile": "https://i.pravatar.cc/150?img=14",
+      "status": "active",
+      "createdAt": "2026-11-06"
+    }
+  ],
+  "admins": [
+    {
+      "id": "1",
+      "userId": "1",
+      "permissions": [
+        "manage_users",
+        "manage_blogs",
+        "manage_comments",
+        "manage_roles",
+        "view_dashboard"
+      ]
+    }
+  ],
+  "blogs": [
+    {
+      "id": "1",
+      "userId": "1",
+      "author": "Waseem Ashraf",
+      "title": "The Future of Artificial Intelligence",
+      "description": "Explore how artificial intelligence is transforming our world.",
+      "content": "Artificial Intelligence is changing the way we work, learn and communicate. From smart assistants to advanced automation, AI is creating new opportunities across industries. Developers should understand AI and learn how to use it effectively.",
+      "category": "Technology",
+      "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800",
+      "status": "published",
+      "createdAt": "2026-11-20",
+      "updatedAt": "2026-11-20"
+    },
+    {
+      "id": "2",
+      "userId": "2",
+      "author": "Ali Hassan",
+      "title": "10 Tips to Become a Better Developer",
+      "description": "Practical tips for improving your programming skills.",
+      "content": "Practice every day, build real projects, read documentation, learn debugging and understand programming fundamentals. Consistency is the key to becoming a better developer.",
+      "category": "Programming",
+      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800",
+      "status": "published",
+      "createdAt": "2026-11-19",
+      "updatedAt": "2026-11-19"
+    },
+    {
+      "id": "3",
+      "userId": "3",
+      "author": "Sarah Ahmed",
+      "title": "A Beginner's Guide to React",
+      "description": "Learn React components, props, state and hooks.",
+      "content": "React is a JavaScript library for building user interfaces. Start by learning JSX, components, props, useState and useEffect. After mastering these fundamentals, explore React Router and state management.",
+      "category": "Web Development",
+      "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800",
+      "status": "published",
+      "createdAt": "2026-11-18",
+      "updatedAt": "2026-11-18"
+    },
+    {
+      "id": "4",
+      "userId": "4",
+      "author": "Usman Khan",
+      "title": "Best Travel Destinations in Pakistan",
+      "description": "Discover the beautiful mountains and valleys of Pakistan.",
+      "content": "Pakistan has incredible travel destinations including Hunza, Skardu, Swat and Naran. These locations offer breathtaking landscapes and memorable experiences.",
+      "category": "Travel",
+      "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800",
+      "status": "published",
+      "createdAt": "2026-11-17",
+      "updatedAt": "2026-11-17"
+    },
+    {
+      "id": "5",
+      "userId": "2",
+      "author": "Ali Hassan",
+      "title": "Mastering JavaScript Array Methods",
+      "description": "Understand map, filter, reduce and other useful methods.",
+      "content": "JavaScript array methods help developers manipulate data efficiently. Map transforms arrays, filter selects elements and reduce combines values into one result.",
+      "category": "Programming",
+      "image": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800",
+      "status": "draft",
+      "createdAt": "2026-11-16",
+      "updatedAt": "2026-11-16"
+    },
+    {
+      "id": "6",
+      "userId": "6",
+      "author": "Ahmed Raza",
+      "title": "The Art of Photography",
+      "description": "Learn how to capture beautiful photographs.",
+      "content": "Photography is a creative way to capture moments. Understanding lighting, composition, camera settings and perspective can improve your photography.",
+      "category": "Photography",
+      "image": "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=800",
+      "status": "published",
+      "createdAt": "2026-11-15",
+      "updatedAt": "2026-11-15"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "blogId": "1",
+      "userId": "2",
+      "author": "Ali Hassan",
+      "text": "Amazing article! AI is definitely the future.",
+      "status": "approved",
+      "createdAt": "2026-11-21"
+    },
+    {
+      "id": "2",
+      "blogId": "1",
+      "userId": "3",
+      "author": "Sarah Ahmed",
+      "text": "Very informative. Thanks for sharing!",
+      "status": "approved",
+      "createdAt": "2026-11-21"
+    },
+    {
+      "id": "3",
+      "blogId": "2",
+      "userId": "1",
+      "author": "Waseem Ashraf",
+      "text": "These tips are really useful for beginners.",
+      "status": "approved",
+      "createdAt": "2026-11-22"
+    },
+    {
+      "id": "4",
+      "blogId": "3",
+      "userId": "4",
+      "author": "Usman Khan",
+      "text": "React is amazing once you understand the basics.",
+      "status": "approved",
+      "createdAt": "2026-11-22"
+    },
+    {
+      "id": "5",
+      "blogId": "3",
+      "userId": "5",
+      "author": "Fatima Noor",
+      "text": "Please share more tutorials like this.",
+      "status": "pending",
+      "createdAt": "2026-11-23"
+    },
+    {
+      "id": "6",
+      "blogId": "4",
+      "userId": "6",
+      "author": "Ahmed Raza",
+      "text": "Hunza is absolutely beautiful!",
+      "status": "approved",
+      "createdAt": "2026-11-23"
+    },
+    {
+      "id": "7",
+      "blogId": "1",
+      "userId": "4",
+      "author": "Usman Khan",
+      "text": "Great explanation of modern AI.",
+      "status": "approved",
+      "createdAt": "2026-11-24"
+    }
+  ],
+  "likes": [
+    {
+      "id": "1",
+      "blogId": "1",
+      "userId": "2",
+      "createdAt": "2026-11-21"
+    },
+    {
+      "id": "2",
+      "blogId": "1",
+      "userId": "3",
+      "createdAt": "2026-11-21"
+    },
+    {
+      "id": "3",
+      "blogId": "1",
+      "userId": "4",
+      "createdAt": "2026-11-22"
+    },
+    {
+      "id": "4",
+      "blogId": "2",
+      "userId": "1",
+      "createdAt": "2026-11-22"
+    },
+    {
+      "id": "5",
+      "blogId": "2",
+      "userId": "3",
+      "createdAt": "2026-11-23"
+    },
+    {
+      "id": "6",
+      "blogId": "3",
+      "userId": "2",
+      "createdAt": "2026-11-23"
+    },
+    {
+      "id": "7",
+      "blogId": "3",
+      "userId": "6",
+      "createdAt": "2026-11-24"
+    },
+    {
+      "id": "8",
+      "blogId": "4",
+      "userId": "1",
+      "createdAt": "2026-11-24"
+    },
+    {
+      "id": "9",
+      "blogId": "4",
+      "userId": "3",
+      "createdAt": "2026-11-24"
+    },
+    {
+      "id": "10",
+      "blogId": "6",
+      "userId": "2",
+      "createdAt": "2026-11-24"
+    }
+  ]
+}

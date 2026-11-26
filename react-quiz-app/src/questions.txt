@@ -1,0 +1,200 @@
+React kya hai?~Database~UI banane ki JavaScript library~CSS framework~Web server
+React ko kis company ne banaya?~Google~Microsoft~Meta (Facebook)~Amazon
+JSX kya hai?~JavaScript ka syntax extension~Nayi programming language~CSS preprocessor~Database query language
+JSX mein CSS class dene ke liye kya likhte hain?~class~cssClass~styleClass~className
+Functional component kya return karta hai?~Sirf string~Renderable UI (JSX waghera)~Sirf object~Hamesha Promise
+Custom component ka naam kaise shuru hona chahiye?~Capital letter se~Underscore se~Small letter se~Number se
+Props kya hote hain?~Component ka private data~CSS rules~Parent se child ko diya gaya data~Browser events
+Child component ke andar props:~Freely change kar sakte hain~Read-only hote hain~Sirf strings hote hain~Global hote hain
+State kya hai?~Server ka database~HTML attribute~Constant value~Component ki memory jo change hone par re-render karati hai
+State banane wala hook kaunsa hai?~useEffect~useRef~useState~useMemo
+useState kya return karta hai?~Array: value aur setter function~Sirf value~Object: get aur set~Sirf function
+State update karne ka sahi tareeqa?~count = 5~setCount(5)~count.set(5)~this.count = 5
+Fragment ka short syntax kya hai?~<div></div>~<frag></frag>~{ }~<></>
+JSX mein JavaScript expression kis mein likhte hain?~( )~[ ]~{ }~" "
+Click event ka sahi syntax?~onClick={handleClick}~onclick="handleClick()"~onClick={handleClick()}~click={handleClick}
+List render karne ke liye aam taur par kya use hota hai?~forEach~map~push~splice
+key prop kyun chahiye?~Styling ke liye~Encryption ke liye~Routing ke liye~List items ko pehchanne ke liye
+Sab se achhi key kaunsi hai?~Math.random()~Array index hamesha~Data ki unique stable ID~Item ka color
+Virtual DOM kya hai?~UI ki in-memory representation~Browser extension~Server-side database~Shadow DOM ka doosra naam
+Reconciliation kya hai?~API call karna~Purane aur naye tree ko compare karke DOM update karna~CSS merge karna~State delete karna
+React mein data flow kaisa hota hai?~Two-way by default~Child se parent only~Random~One-way, parent se child
+React 18 mein app mount karne ke liye?~ReactDOM.mount()~React.start()~createRoot(el).render(<App />)~App.init()
+{isLoggedIn && <Dashboard />} kab Dashboard dikhayega?~Jab isLoggedIn truthy ho~Hamesha~Jab false ho~Kabhi nahi
+{0 && <p>Hi</p>} screen par kya dikhayega?~Hi~0~Kuch nahi~false
+JSX mein inline style kaise dete hain?~style="color: red"~style={color: red}~css="red"~style={{ color: 'red' }}
+children prop mein kya aata hai?~Component ke sab state~Parent component ka naam~Opening aur closing tag ke beech ka content~Child routes only
+Parent ko child se data bhejne ka aam tareeqa?~Parent callback function prop mein de, child call kare~Child props edit kare~window variable~CSS variables
+Component re-render kab ho sakta hai?~Sirf page reload par~State change ya parent re-render par~Sirf CSS change par~Local variable change par
+Vite se React project banane ki command?~npm install react-app~vite new react~npx react start~npm create vite@latest
+JSX mein label ka for attribute kya ban jata hai?~forId~labelFor~htmlFor~for_
+Controlled input kya hota hai?~Jiski value React state se aati hai~Disabled input~Jiski value sirf DOM rakhe~Password input
+Form submit par page reload rokne ke liye?~e.stopPropagation()~e.preventDefault()~return state~e.reload(false)
+Purani value par depend karne wala safe update?~setCount(count++)~count += 1~setCount(this.count)~setCount(c => c + 1)
+count 0 hai. Ek click mein setCount(count + 1) teen baar chale to result?~3~0~1~Error
+State mein array mein item add karne ka sahi tareeqa?~setItems([...items, x])~items.push(x)~setItems(items.push(x))~items[items.length] = x
+Object state ki ek field update karni ho to?~user.name = 'Ali'~setUser({ ...user, name: 'Ali' })~setUser('Ali')~user.set('name')
+Component kuch render na kare to kya return kare?~0~"none"~{}~null
+Named export ko import karne ka sahi syntax?~import Button from './Button'~import * Button~import { Button } from './Button'~require Button
+Hooks kahan call kar sakte hain?~Component ya custom hook ke top level par~if ke andar~Loop ke andar~Kisi bhi normal function mein
+StrictMode ka maqsad?~Production speed barhana~Development mein potential bugs pakarna~TypeScript enable karna~CSS validate karna
+Default prop value dene ka modern tareeqa (function component)?~this.defaults~useDefault()~props.default()~function Card({ title = 'Hi' })
+<Card {...user} /> kya karta hai?~user ko ek prop banata hai~user delete karta hai~user ki properties alag props ban kar jaati hain~Error deta hai
+Class component mein UI return karne wala method?~render()~return()~view()~display()
+JSX comment kaise likhte hain?~<!-- hi -->~{/* hi */}~// hi tags ke beech~## hi
+Do siblings ko state share karni ho to?~Dono mein alag state rakho~CSS use karo~localStorage hamesha~State common parent mein le jao
+JSX compile hokar kya banta hai?~HTML file~CSS~JavaScript function calls~JSON file
+SPA ka matlab?~Single Page Application~Server Page Application~Static Program API~Simple Page Architecture
+Input ki typed value event se kaise milti hai?~e.value~e.target.value~e.input~e.text
+Checkbox ko controlled banane ke liye kaunsa prop?~value~selected~active~checked
+React elements ke baare mein sahi baat?~Mutable DOM nodes hain~CSS objects hain~Immutable descriptions hain~Sirf class instances hain
+useEffect ka main kaam?~State banana~Component ko external system se sync karna~JSX compile karna~Routing
+Empty dependency array [] wala effect kab chalta hai?~Har render par~Kabhi nahi~Sirf unmount par~Mount ke baad (dev StrictMode mein extra cycle)
+Dependency array na dein to effect?~Sirf ek baar~Sirf unmount par~Har render ke baad~Error
+Effect ka cleanup function kab chalta hai?~Agle effect run se pehle aur unmount par~Sirf mount par~Render se pehle har dafa~Sirf error par
+setInterval wale effect mein cleanup kya hoga?~setTimeout~clearInterval~return null~stop()
+useRef ki value change karne par?~Re-render hota hai~Component unmount hota hai~Error aata hai~Re-render nahi hota
+Input par focus karne ke liye kya use karein?~useMemo~useReducer~useRef~useId
+Context API kis problem ko solve karti hai?~Prop drilling~Slow network~CSS conflicts~SEO
+Context ki value padhne wala hook?~useProvider~useContext~useStore~useGlobal
+Provider na ho to useContext kya deta hai?~Hamesha error~null hamesha~Empty object~createContext ki default value
+useReducer kab behtar hai?~Sirf ek boolean ho~DOM access chahiye~Complex, related state transitions hon~CSS animation ho
+Reducer function ka signature?~(state, action) => newState~(props) => JSX~(action) => void~(state) => dispatch
+Reducer kaisa hona chahiye?~API calls karne wala~Pure~State mutate karne wala~Async
+Custom hook ka naam kis se shuru hota hai?~get~hook~with~use
+Do components ek hi custom hook use karein to state?~Automatically shared~Global~Har call ka alag~Sirf pehle ko milta hai
+useMemo kya cache karta hai?~Calculation ka result~DOM node~Poora component hamesha~HTTP response browser mein
+useCallback kya cache karta hai?~Function ka return value~Function ki definition (reference)~Props~CSS
+React.memo kya karta hai?~State save karta hai~Effect memoize karta hai~API cache karta hai~Props same hon to re-render skip kar sakta hai
+React.memo props kaise compare karta hai by default?~Deep comparison~JSON string se~Shallow, Object.is se~Sirf keys se
+React Router (v6+) mein routes ka wrapper?~<Routes>~<Switch>~<Router-List>~<Pages>
+Page reload ke baghair navigate karne ke liye?~<a href>~<Link to>~window.location~<nav src>
+URL /users/:id se id kaise lein?~useQuery~useId~useRoute~useParams
+Code se navigate karne wala hook?~useHistoryPush~useLink~useNavigate~useRedirect
+Nested route kahan render hota hai?~<Outlet />~<Slot />~<Child />~<Yield />
+Data fetch mein race condition se bachne ka tareeqa?~useRef hata do~Cleanup mein ignore flag ya AbortController~setTimeout lagao~State mutate karo
+useEffect(async () => {...}) kyun ghalat hai?~Async allowed hi nahi React mein~Syntax error hai~Effect do baar nahi chalta~Async function Promise return karta hai, cleanup nahi
+Lifting state up ka matlab?~State ko server par bhejna~State delete karna~State ko common parent mein rakhna~State CSS mein rakhna
+Derived data (jaise fullName) ke liye best?~Render ke dauran calculate karo~Alag state + effect~localStorage~Ref
+key badalne par component ka kya hota hai?~Sirf style badalta hai~Purana unmount, naya mount, state reset~Kuch nahi~State preserve hoti hai
+Error Boundary kaunsi error pakarta hai?~Event handler ki~setTimeout ki~Apni khud ki~Child tree ke rendering aur lifecycle ki
+Built-in Error Boundary banane ke liye kya chahiye?~useError hook~try/catch JSX mein~Class component~useEffect
+Code splitting ke liye React API?~React.lazy~React.split~useChunk~React.defer
+Lazy component ke saath fallback UI kaun deta hai?~Fragment~Suspense~StrictMode~Profiler
+Portal ka use?~Routing~State sharing~Server rendering~Parent DOM hierarchy ke bahar render karna (modal)
+Portal ke andar se event kahan bubble karta hai?~Kahin nahi~Sirf document tak~React tree ke parents tak~Sirf portal node tak
+Uncontrolled input ki initial value dene ka prop?~value~defaultValue~initialValue~startValue
+Redux Toolkit mein slice banane ka function?~makeReducer~createStoreSlice~newSlice~createSlice
+Redux store se data padhne wala hook?~useDispatch~useStore only~useSelector~useAction
+Redux Toolkit reducer mein state.count += 1 kyun chalta hai?~Immer immutable update bana deta hai~Redux mutation allow karta hai~JavaScript copy karta hai~React fix karta hai
+componentDidMount ka hooks mein qareebi equivalent?~useMemo~useEffect with []~useState~useRef
+useId kis liye hai?~List keys banane~Database IDs~Route IDs~Accessibility attributes ke liye stable unique ID
+useLayoutEffect kab chalta hai?~Paint ke baad hamesha~Render se pehle~DOM update ke baad, paint se pehle~Sirf server par
+Vite mein client env variable ka prefix?~VITE_~REACT_~PUBLIC_~ENV_
+Frontend env variable mein secret API key rakhna?~Bilkul safe~Unsafe, bundle mein dikh sakti hai~Encrypted ho jati hai~Sirf dev mein bundle hoti hai
+StrictMode development mein effects ke saath kya karta hai?~Effects band karta hai~Teen baar chalata hai~Sirf production mein chalata hai~Ek extra setup + cleanup cycle chalata hai
+Same value setState mein dein (Object.is same) to?~Hamesha crash~Double render~React aam taur par re-render bail out karta hai~State reset
+Stale closure ka matlab?~Function purane render ki values dekh raha hai~Component band ho gaya~Memory full~CSS purani hai
+Debounced search ke effect mein cleanup mein kya karein?~State reset~clearTimeout~Page reload~Kuch nahi
+Context value badalne par kaun re-render hota hai?~Poora browser~Sirf Provider~Koi nahi~Us context ke consumers
+Component composition ka matlab?~Class inheritance~CSS merge~Chhote components ko jor kar bara UI banana~Files zip karna
+React Fiber kya hai?~CSS engine~Network layer~Reconciliation engine jo render work ko units mein baant sakta hai~Testing tool
+Render phase ke baare mein sahi baat?~Pure honi chahiye; React ise dobara ya adhoora chala sakta hai~DOM yahin update hota hai~Hamesha sirf ek baar chalti hai~Side effects ke liye best hai
+DOM mutations kis phase mein apply hoti hain?~Render~Commit~Diffing se pehle~Hydration se pehle
+Same position par element type div se span ho jaye to?~Sirf tag rename~State preserve~Kuch nahi~Purana subtree unmount, naya mount
+Component ke andar doosra component define karne ka masla?~Syntax error~Props nahi milte~Har render par naya type banta hai, state reset hoti hai~Hooks globally share ho jate hain
+React 18 automatic batching kya karta hai?~Promises, timeouts waghera ke updates bhi batch karta hai~Sirf event handlers batch karta hai~API calls batch karta hai~CSS batch karta hai
+Update ko foran synchronously DOM mein flush karne ke liye?~startTransition~flushSync~useDeferredValue~queueMicrotask
+setN(n + 5); setN(x => x + 1) jab n = 0. Result?~1~5~0~6
+setN(x => x + 1); setN(10) ke baad n?~11~1~10~Error
+Hooks ka order same rehna kyun zaroori hai?~React call order se state ko match karta hai~JavaScript ki limitation~CSS ke liye~Babel crash karta hai
+Effects aur cleanup mein dependencies kaise compare hoti hain?~Deep equal~==~Object.is~JSON.stringify
+Dependency mein har render naya object ho to?~Effect kabhi nahi chalega~Effect har render ke baad chalega~Sirf ek baar~Compile error
+Object dependency ka masla hal karne ka behtar tareeqa?~Lint rule band karo~Dependency array hata do~State mutate karo~Object effect ke andar banao ya primitive values par depend karo
+useMemo ke baare mein sahi baat?~Performance optimization hai, semantic guarantee nahi~Value hamesha permanent rehti hai~Side effects ke liye hai~State ka replacement hai
+React.memo child ko inline onClick={() => {}} dene se?~Memo behtar chalta hai~Error~Har parent render par prop naya, memo bekaar~Click kaam nahi karta
+useCallback ka faida aam taur par kab hota hai?~Har function par~Jab function memoized child ya effect dependency ho~Sirf class components mein~Jab function kabhi use na ho
+React.memo ka doosra argument kya hai?~Default props~Cleanup~Context~Custom arePropsEqual function
+React Compiler ka main maqsad?~Build time par automatic memoization~TypeScript compile karna~CSS minify karna~Server banana
+Slow renders measure karne ke liye?~StrictMode~Fragment~React DevTools Profiler~ESLint
+10,000 rows ki list ke liye best technique?~Sab par useEffect~Virtualization (windowing)~Index key~Zyada Context
+Bara context har change par sab consumers re-render kare to?~key random do~StrictMode hatao~Context mutate karo~Context ko split karo aur value memoize karo
+<Ctx value={{ user }}> inline likhne ka masla?~Har render par naya reference, consumers re-render~Syntax error~Value undefined~Context delete ho jata hai
+Parent re-render par children prop se aaye elements (same reference) ke saath?~Hamesha remount~State reset~React unka re-render skip kar sakta hai~Error
+Re-renders kam karne ke liye state kahan rakhein?~Hamesha root par~Jahan use hoti hai us ke qareeb (colocation)~window par~Har component mein copy
+External store ko subscribe karne ka recommended hook?~useReducer~useId~useInsertionEffect~useSyncExternalStore
+useSyncExternalStore kis problem se bachata hai?~Concurrent rendering mein tearing~Memory leak CSS ka~SEO issues~CORS
+useInsertionEffect kis ke liye hai?~Data fetching~Analytics~CSS-in-JS libraries ke styles inject karna~Focus management
+useImperativeHandle kya karta hai?~State global karta hai~Ref ke zariye parent ko milne wali value customize karta hai~Event rokta hai~Component lazy karta hai
+React 19 mein function component ref kaise le sakta hai?~Sirf class ban kar~findDOMNode se~Context se~ref ko normal prop ki tarah
+Callback ref kab call hota hai?~DOM node attach hone par (aur detach par cleanup/null)~Sirf click par~Har CSS change par~Sirf server par
+Render ke dauran ref.current likhna?~Recommended~Zaroori~Avoid karein (lazy init jaisi surat ke siwa)~Re-render karata hai
+DOM measure karke tooltip position karni ho bina flicker?~useEffect~useLayoutEffect~useMemo~setTimeout
+useState(expensive()) vs useState(expensive)?~Dono same~Pehla lazy hai~Doosra error deta hai~Doosra function ko sirf initialization par chalata hai
+Effect ke andar baghair condition setState aur dependency array na ho to?~Infinite render loop ho sakta hai (jab value badalti rahe)~Sirf ek render~Effect disable~Kuch nahi
+Props change par poori state reset karne ka clean tareeqa?~Effect mein har field reset~Page reload~Component ko naya key do~Props mutate karo
+useEffectEvent (React 19.2) kis liye hai?~DOM events banana~Effect mein latest props/state padhna bina usay re-trigger kiye~Server events~Effects cancel karna
+Event handler ka logic effect mein rakhne ke bajaye kahan ho?~Render body~Reducer ke andar side effect~CSS~Seedha event handler mein
+Error Boundary mein fallback state set karne wala static method?~getDerivedStateFromError~componentDidMount~getSnapshotBeforeUpdate~shouldComponentUpdate
+Error logging ke liye class method?~componentWillUnmount~render~componentDidCatch~forceUpdate
+PureComponent kya karta hai?~Deep compare~Shallow compare of props aur state~State band karta hai~Server par render
+DOM update se pehle scroll position capture karne wala class method?~componentDidUpdate~componentDidMount~getDerivedStateFromProps~getSnapshotBeforeUpdate
+React ka synthetic event system events kahan delegate karta hai (v17+)?~Root container par~window.top par~Har node par alag~<head> par
+Capture phase mein click pakarne ka prop?~onClickFirst~onCapture~onClickCapture~onPreClick
+Index key kab masla banti hai?~Static list mein~List reorder, insert ya delete ho~Ek hi item ho~Sirf SSR mein
+Diffing mein React ki aam assumption?~Har tree ka optimal O(n³) diff~CSS se compare~Keys ignore~Different types alag trees banate hain; keys identity batati hain
+<Profiler> ka onRender kya deta hai?~Render timing information~Network logs~Memory dump~CSS errors
+Effect mein event listener add karke cleanup na karne se?~Speed barhti hai~Compile error~Duplicate listeners aur memory leak~Kuch nahi
+Production mein bundle size kam karne ka tareeqa?~Sab kuch ek file mein~Route-level lazy loading~Zyada Context~StrictMode hatana
+lazy() call kahan honi chahiye?~Component body mein~useEffect mein~Event handler mein har dafa~Module ke top level par
+React.lazy ko by default kaisa module chahiye?~Default export wala~Sirf named export~CommonJS only~JSON
+startTransition kya karta hai?~Update delete karta hai~Fixed delay lagata hai~Update ko non-urgent, interruptible mark karta hai~Naya thread banata hai
+useTransition kya return karta hai?~[isPending, startTransition]~[value, setValue]~Sirf boolean~Promise
+useDeferredValue ka use?~API cache~UI ke kam urgent hissay ko value ka pichhla version de kar baad mein update karna~State persist~Fixed 300ms debounce
+Transition kis update ke liye theek nahi?~Bari list filter~Tab switch~Chart redraw~Controlled input ki typed value
+Suspense kya karta hai?~Errors pakarta hai~State save karta hai~Child ready na ho to fallback dikhata hai~Effects rokta hai
+Kaunsa data fetch Suspense ko trigger nahi karta?~useEffect ke andar fetch~use se cached Promise padhna~lazy component load~Suspense-enabled framework data
+React 19 ka use API kya padh sakta hai?~Sirf DOM~Promise aur context~Sirf CSS~Sirf localStorage
+Baqi hooks ke muqable use ki khaas baat?~Kisi bhi normal function mein~Sirf class mein~Sirf effect mein~Component/hook mein condition ya loop ke andar bhi call ho sakta hai
+useActionState kya deta hai?~Sirf error~Router state~State, action function aur pending flag~DOM ref
+useFormStatus kahan se import hota hai aur kahan chalta hai?~react-dom; <form> ke andar wale child component mein~react; kahin bhi~react-router; route mein~react-dom/server; server par
+useOptimistic ka maqsad?~Bundle chhota karna~Server response se pehle expected UI dikhana~Errors chhupana~Cache clear karna
+React 19 mein context provide karne ka naya short form?~<Context.Consumer>~<useContext>~<Context>~<Provide>
+React Server Components ke baare mein sahi baat?~useState use kar sakte hain~onClick laga sakte hain~Sirf browser mein chalte hain~Unka component code client JS bundle mein nahi jata
+'use client' directive kya karta hai?~Server/client module boundary mark karta hai~SSR bilkul band karta hai~Browser detect karta hai~Cache enable karta hai
+'use server' directive kis liye?~Server Component banane ke liye~Client se callable server functions mark karne ke liye~SSR enable karne ke liye~Database banane ke liye
+Server se Client Component ko kaunsa prop pass nahi ho sakta?~String~Plain object~Aam (non-server) function~Number
+Server Function ke arguments ke saath kya karein?~Hamesha trust karein~Sirf client par validate~Kuch nahi~Server par validate aur authorize karein
+Next.js App Router mein components by default kya hote hain?~Server Components~Client Components~Class components~Static HTML only
+Hydration kya hai?~CSS load karna~Server HTML par React event handlers aur state attach karna~Database sync~Images load karna
+Hydration mismatch ki aam wajah?~Props ka use~Fragment~Render mein Date.now() ya window par depend karna~Key dena
+Node streams ke liye streaming SSR API?~renderToString~createRoot~hydrateRoot~renderToPipeableStream
+SSR HTML ko client par interactive banane ki API?~hydrateRoot~createRoot().render~renderToStaticMarkup~flushSync
+SSG aur SSR mein farq?~SSG sirf client par~SSG build time par HTML banata hai, SSR request par~SSR build time par~Koi farq nahi
+<Activity mode="hidden"> (React 19.2) kya karta hai?~Subtree delete aur state khatam~Sirf opacity 0~UI chhupata hai, state preserve karta hai aur effects clean up karta hai~Server par bhej deta hai
+Higher-Order Component kya hai?~Bara component~Root component~Context provider only~Function jo component le kar naya component return kare
+Render props pattern?~Function prop jo batata hai kya render karna hai~CSS props~Props ko state banana~SSR technique
+Compound components pattern ki misaal?~Ek component, 50 boolean props~<Tabs>, <Tab>, <TabPanel> jo shared state use karein~Do apps jorna~Sirf HOC
+Headless component ka matlab?~<head> ke baghair~Server only~Logic aur behavior deta hai, styling user par~State ke baghair
+Server data (caching, refetch) ke liye aam library?~Lodash~Formik~Framer Motion~TanStack Query
+TanStack Query mein cache ki pehchan?~queryKey~Component name~URL hash only~useId
+Mutation ke baad purana data refresh karne ke liye?~Page reload~invalidateQueries~forceUpdate~State mutate
+Redux mein memoized selector banane ka function?~createAction~configureStore~createSelector~combineReducers
+RTK Query kis kaam ke liye hai?~Styling~Routing~Animation~Data fetching aur caching
+React mein {userInput} render karne par XSS se protection?~React text ko escape karta hai~Koi protection nahi~Input block hota hai~Server sanitize karta hai
+Kaunsa XSS risk paida kar sakta hai?~className~Unsanitized dangerouslySetInnerHTML~key~useMemo
+Auth token ke liye JavaScript se chhupa storage?~localStorage~sessionStorage~HttpOnly cookie~Redux store persist
+Protected route client par lagana kaafi hai?~Haan, mukammal security~Haan, agar minified ho~Haan, HTTPS ho to~Nahi, server par authorization zaroori hai
+React Testing Library ka falsafa?~User ki tarah behavior test karo~Internal state test karo~Sirf snapshots~Private methods test karo
+Elements dhoondne ke liye pehli tarjeeh?~getByTestId~getByRole~querySelector~CSS class
+Element async baad mein aaye to?~getByText~queryByText~findByText~selectByText
+Element ke na hone ko assert karne ke liye?~getBy...~findBy...~getAllBy...~queryBy...
+act() kyun use hota hai?~Assertions se pehle React updates process karwane ke liye~Animation ke liye~API mock ke liye~Coverage ke liye
+Tests mein API mock karne ka popular tool?~Webpack~MSW (Mock Service Worker)~Prettier~Babel
+TypeScript mein children ki aam type?~string~HTMLElement~React.ReactNode~object[]
+useState<User | null>(null) ka matlab?~State hamesha User~State hamesha null~Runtime validation~State User ya null ho sakti hai
+Input change event ki TypeScript type?~React.ChangeEvent<HTMLInputElement>~MouseEvent~InputType~React.FormNode
+createPortal ke arguments?~Component aur props~Children aur DOM node~URL aur route~State aur setter
+Custom hook mein WebSocket subscribe karte waqt zaroori?~Render mein connect~useMemo mein connect~Effect mein connect aur cleanup mein close~Global variable bina cleanup
+React 19 mein component ke andar <title> likhne se?~Error~Ignore hota hai~Body mein text dikhta hai~React usay document <head> mein hoist karta hai
+Performance optimization ka sahi order?~Pehle measure, phir bottleneck fix, phir dobara measure~Har jagah useMemo~Pehle sab classes banao~Pehle Redux lagao
