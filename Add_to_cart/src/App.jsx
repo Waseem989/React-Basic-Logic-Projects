@@ -74,7 +74,7 @@ const addtocart = (product) => {
           </h2>
 
           <button
-            className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
+            className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition active:bg-blue-900"
             onClick={() => addtocart(item)}
           >
             Add to Cart
@@ -119,7 +119,7 @@ const addtocart = (product) => {
 
     {/* Cart Items */}
     <div className="flex-1 overflow-y-auto p-5">
-      <Cart cart={cart} />
+      <Cart cart={cart} setCart={setCart} />
     </div>
 
     {/* Sidebar Footer */}
