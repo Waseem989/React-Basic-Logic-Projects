@@ -14,6 +14,8 @@ function App() {
   ];
   const [iscart, setIsCart] = useState(false);
   const [cart, setCart] = useState([]);
+
+ 
 const addtocart = (product) => {
   setCart((prev) => {
     const exist = prev.find((item) => {
