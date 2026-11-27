@@ -35,8 +35,6 @@ const addtocart = (product) => {
 };
 
 
-
-
   return (
     
 <>
