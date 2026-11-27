@@ -1,11 +1,10 @@
-
 import { useState } from "react";
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import ProductList from "./components/ProductList";
 import VirtualTryOn from "./pages/VirtualTryOn";
-import Cart from "./components/cart";
+import Cart from "./components/Cart.jsx";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -14,15 +13,13 @@ function App() {
 
   const addToCart = (product) => {
     setCart((prev) => {
-      const existing = prev.find(
-        (item) => item.id === product.id
-      );
+      const existing = prev.find((item) => item.id === product.id);
 
       if (existing) {
         return prev.map((item) =>
           item.id === product.id
             ? { ...item, quantity: item.quantity + 1 }
-            : item
+            : item,
         );
       }
 
@@ -51,31 +48,18 @@ function App() {
   return (
     <>
       <Navbar
-        cartCount={cart.reduce(
-          (total, item) => total + item.quantity,
-          0
-        )}
+        cartCount={cart.reduce((total, item) => total + item.quantity, 0)}
         onCartClick={handleOpenCart}
       />
 
       {showCart ? (
-        <Cart
-          cart={cart}
-          setCart={setCart}
-          onBack={handleCloseCart}
-        />
+        <Cart cart={cart} setCart={setCart} onBack={handleCloseCart} />
       ) : selectedProduct ? (
-        <VirtualTryOn
-          product={selectedProduct}
-          onBack={handleBack}
-        />
+        <VirtualTryOn product={selectedProduct} onBack={handleBack} />
       ) : (
         <>
           <Hero />
-          <ProductList
-            onAddToCart={addToCart}
-            onTryOn={handleTryOn}
-          />
+          <ProductList onAddToCart={addToCart} onTryOn={handleTryOn} />
         </>
       )}
     </>
