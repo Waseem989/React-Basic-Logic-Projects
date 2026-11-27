@@ -1,73 +1,49 @@
 
-import {
-  ShoppingBag,
-  Search,
-  User,
-  Menu,
-} from "lucide-react";
 
-function Navbar() {
+
+import { Search, User, ShoppingBag, Menu } from "lucide-react";
+
+function Navbar({ cartCount = 0, onCartClick }) {
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-gray-200">
+    <nav className="sticky top-0 z-50 bg-black text-white px-6 py-5">
+      <div className="max-w-7xl mx-auto flex items-center justify-between">
 
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <h1 className="text-2xl font-black tracking-widest">
+          STYLEFIT <span className="text-purple-400">AI.</span>
+        </h1>
 
-        {/* Logo */}
-        <div className="text-2xl font-black tracking-tighter">
-          STYLEFIT<span className="text-gray-400"> AI.</span>
+        <div className="hidden md:flex items-center gap-8 text-sm">
+          <a href="#" className="hover:text-purple-400">Home</a>
+          <a href="#shop" className="hover:text-purple-400">Shop</a>
+          <a href="#categories" className="hover:text-purple-400">Categories</a>
+          <a href="#about" className="hover:text-purple-400">About</a>
         </div>
 
-        {/* Navigation Links */}
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
-
-          <a href="/" className="hover:text-black transition">
-            Home
-          </a>
-
-          <a href="#products" className="hover:text-black transition">
-            Shop
-          </a>
-
-          <a href="#categories" className="hover:text-black transition">
-            Categories
-          </a>
-
-          <a href="#about" className="hover:text-black transition">
-            About
-          </a>
-
-        </div>
-
-        {/* Right Actions */}
         <div className="flex items-center gap-5">
+          <Search size={20} className="cursor-pointer" />
+          <User size={20} className="cursor-pointer" />
 
-          <button className="hover:text-gray-500 transition">
-            <Search size={21} />
+          <button
+            onClick={onCartClick}
+            className="relative"
+            aria-label="Open shopping cart"
+          >
+            <ShoppingBag size={22} />
+
+            {cartCount > 0 && (
+              <span className="absolute -top-3 -right-3 bg-purple-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                {cartCount}
+              </span>
+            )}
           </button>
 
-          <button className="hover:text-gray-500 transition">
-            <User size={21} />
-          </button>
-
-          <button className="relative hover:text-gray-500 transition">
-            <ShoppingBag size={21} />
-
-            <span className="absolute -top-2 -right-2 bg-black text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">
-              0
-            </span>
-          </button>
-
-          {/* Mobile Menu */}
-          <button className="md:hidden">
-            <Menu size={23} />
-          </button>
-
+          <Menu className="md:hidden" size={23} />
         </div>
 
       </div>
-
     </nav>
   );
 }
 
 export default Navbar;
+
